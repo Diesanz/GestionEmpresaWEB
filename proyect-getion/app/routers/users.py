@@ -149,7 +149,6 @@ async def crear_usuario(id_gestion: int, usuario: UsuarioDB):
     else:
         user_id = user.id_person
 
-    print(user_id)
     if (await search_usuario_empresa(user_id, usuario.user_company)):
         await insert_usuario_empresa(usuario.user_company, user_id)
     else:

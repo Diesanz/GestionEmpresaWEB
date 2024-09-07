@@ -50,7 +50,7 @@ def add_empresa(empresa: str, gestion_id: int, id_person: int ) -> bool:
 # Función asíncrona para obtener las empresas asociadas a una gestión
 async def get_empresas(id_gestion: int):
     conn = get_connection()
-    print("Getting", id_gestion)
+
     empresas = []  
     
     if conn:
@@ -60,7 +60,6 @@ async def get_empresas(id_gestion: int):
             cursor.execute(query, (id_gestion,))
             
             for row in cursor.fetchall():
-                print(row['id_empresa'])
                 empresas.append(row['id_empresa'])
             
             return empresas 
