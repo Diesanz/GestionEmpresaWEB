@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Gestión</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Gestión de Usuarios</h1>
+            <nav class="nav-buttons">
+                <a href="/" class="nav-btn">Inicio</a>
+                <a href="/gestiones" class="nav-btn">Gestiones</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="form-container-gestion">
+            <h1>Crear Nueva Gestión</h1>
+            <form id="create-management-form">
+                <div class="campo">
+                    <label for="gestion-name">Nombre de la Gestión:</label>
+                    <input type="text" id="nombre_gestion" name="nombre_gestion" required>
+                </div>
+                <div class="campo">
+                    <label for="gestion-description">Descripción:</label>
+                    <textarea id="descripcion" name="descripcion" rows="4" required></textarea>
+                </div>
+                <div class="campo">
+                    <label for="gestion-date">Fecha:</label>
+                    <input type="date" id="fecha_creacion" name="fecha_creacion" required>
+                </div>
+                <div class="campo">
+                    <label for="gestion-empresa">Empresas:</label>
+                    <input type="text" id="empresas" name="empresas" required>
+                </div>
+                <a class="frase-info">Separe las empresas por comas</a>
+                <button type="submit">Crear Gestión</button>
+            </form>
+        </div>
+    </main>
+    <script src="/static/js/scripts.js"></script>
+</body>
+</html>

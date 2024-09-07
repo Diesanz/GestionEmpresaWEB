@@ -1,0 +1,192 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #333, #555);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensure padding and border are included in width/height calculations */
+}
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #222;
+    color: white;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header-content {
+    display: flex;
+    flex-wrap: wrap; /* Allow content to wrap on smaller screens */
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+h1 {
+    margin-top: 0;
+    font-size: 32px;
+    color: #FF5722;
+    text-align: center;
+}
+
+.nav-buttons {
+    display: flex;
+    flex-wrap: nowrap; /* Keep buttons in a single row */
+    gap: 10px;
+}
+
+.nav-btn {
+    background-color: #FF5722;
+    text-decoration: none;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-btn:hover {
+    background-color: #FF7043;
+    transform: scale(1.05);
+}
+
+/* Main Content */
+main {
+    margin-top: 80px; /* Ensure content is not hidden behind the fixed header */
+}
+
+/* Hero Section */
+.hero {
+    padding: 40px 20px; /* Adjust padding for smaller screens */
+    margin: 20px auto;
+    max-width: 800px;
+    background-color: #222;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.hero h2 {
+    margin-top: 0;
+    font-size: 24px; /* Adjust font size for smaller screens */
+}
+
+.hero p {
+    font-size: 16px; /* Adjust font size for smaller screens */
+    line-height: 1.6;
+}
+
+/* General Section Styles */
+section {
+    padding: 40px 20px; /* Adjust padding for smaller screens */
+    margin: 20px auto;
+    max-width: 800px;
+    background-color: #222;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease;
+    text-align: center; /* Center align text */
+}
+
+section h2 {
+    margin-top: 0;
+    font-size: 24px; /* Adjust font size for smaller screens */
+}
+
+/* Hover Effect for Sections */
+section:hover {
+    background-color: #FF5722;
+}
+
+/* List Styles */
+ul {
+    list-style-type: disc;
+    margin: 0;
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column; /* Stack title and buttons vertically */
+        align-items: center;
+        text-align: center; /* Center align text */
+    }
+
+    .nav-buttons {
+        flex-direction: row; /* Keep buttons in a row */
+        flex-wrap: nowrap; /* No wrapping for buttons */
+        justify-content: center; /* Center buttons */
+        gap: 5px; /* Reduced gap between buttons */
+    }
+
+    .nav-btn {
+        font-size: 14px; /* Reduce font size */
+        padding: 8px 16px; /* Reduce padding */
+    }
+
+    .hero, section {
+        padding: 20px; /* Adjust padding for smaller screens */
+    }
+
+    .menu {
+        width: 200px; /* Reduce menu width */
+    }
+
+    .search-btn, .menu-action {
+        font-size: 12px; /* Reduce font size for buttons in menu */
+        padding: 8px; /* Reduce padding for buttons in menu */
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 20px; /* Further adjust font size for very small screens */
+    }
+
+    .hero h2, section h2 {
+        font-size: 20px; /* Further adjust font size for very small screens */
+    }
+
+    .hero p, section p {
+        font-size: 14px; /* Further adjust font size for very small screens */
+    }
+
+    .nav-buttons {
+        flex-direction: row; /* Keep buttons in a row */
+        flex-wrap: nowrap; /* No wrapping for buttons */
+        justify-content: center; /* Center buttons */
+        gap: 5px; /* Reduced gap between buttons */
+    }
+
+    .nav-btn {
+        font-size: 12px; /* Further reduce font size */
+        padding: 6px 12px; /* Further reduce padding */
+    }
+
+    .menu {
+        width: 150px; /* Further reduce menu width */
+    }
+
+    .search-btn, .menu-action {
+        font-size: 10px; /* Further reduce font size for buttons in menu */
+        padding: 6px; /* Further reduce padding for buttons in menu */
+    }
+}

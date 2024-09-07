@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Gestión de Usuarios</h1>
+            <nav class="nav-buttons">
+                <a href="/" class="nav-btn">Inicio</a>
+                <a href="/login" class="nav-btn">Iniciar Sesión</a>
+                <a href="/registro" class="nav-btn">Registrarse</a>
+            </nav>
+        </div>
+    </header>
+    <div class="main-content">
+        <div class="contenedor">
+            <h1>Iniciar Sesión</h1>
+            <form id="formularioInicio" name="formularioInicio">
+                <div class="campo">
+                    <label for="email">Correo Electrónico:</label>
+                    <input type="email" id="username" name="username" required>
+                </div>
+                <div class="campo">
+                    <label for="contraseña">Contraseña:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit">Iniciar Sesión</button>
+            </form>
+        </div>
+    </div>
+    <script src="/static/js/scripts.js"></script>
+</body>
+</html>

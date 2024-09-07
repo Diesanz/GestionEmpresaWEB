@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla de Usuarios</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Gestión de Usuarios</h1>
+            <nav class="nav-buttons">
+                <a class="menu-toggle">☰ Menú</a>
+                <a href="/gestiones" class="nav-btn">Gestiones</a>
+                <a id = "add-manager-gestion" class="nav-btn">Añadir Gestor</a>
+                <a class="nav-btn" id="crear-usuario">Añadir Usuario</a>
+            </nav>
+        </div>
+    </header>
+    <div class="menu">
+        <div class="menu-content">
+            <label for="search-id">Buscar por ID:</label>
+            <input type="text" id="search-id" placeholder="ID">
+            <label for="search-name">Buscar por Nombre:</label>
+            <input type="text" id="search-name" placeholder="Nombre">
+            <label for="search-company">Buscar por Empresa:</label>
+            <input type="text" id="search-company" placeholder="Empresa">
+            <button class="search-btn">Buscar</button>
+            <button id= "select-all-btn" class="menu-action">Seleccionar Todo</button>
+            <button id= "deselect-all-btn" class="menu-action">Deseleccionar Todo</button>
+            <button id= "delete-selected-btn" class="menu-action">Eliminar Seleccionados</button>
+        </div>
+    </div>
+    <div class="table-container" id="tabla-container">
+        <table id="tabla-usuarios">
+            <thead>
+                <tr>
+                    <th>Selected</th>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Email</th>
+                    <th>Empresa</th>
+                </tr>
+            </thead>
+            <tbody id="tabla-usuarios-info">
+                <!-- Más filas -->
+            </tbody>
+        </table>
+    </div>
+    <script src="/static/js/scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,384 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #333, #555);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #222;
+    color: white;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column; /* Stack title and buttons vertically in small screens */
+    align-items: center;
+    width: 100%;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+h1 {
+    margin-top: 0;
+    font-size: 32px;
+    color: #FF5722;
+    text-align: center;
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px; /* Add margin to separate from the title */
+}
+
+.menu-toggle, .nav-btn {
+    background-color: #FF5722;
+    text-decoration: none;
+    color: white;
+    border: none;
+    padding: 10px 20px; /* Tamaño base del botón */
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.menu-toggle:hover, .nav-btn:hover {
+    background-color: #FF7043;
+    transform: scale(1.05);
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #444;
+    color: white;
+    width: 250px;
+    height: 100%;
+    transition: transform 0.3s ease;
+    transform: translateX(100%);
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.menu-content {
+    margin-top: 70px;
+    flex: 1;
+}
+
+.menu-content label, .menu-content input {
+    display: block;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.menu-content input {
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    background-color: #555;
+    color: white;
+}
+
+.search-btn, .menu-action {
+    background-color: #E64A19;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    margin-bottom: 15px;
+}
+
+.search-btn:hover, .menu-action:hover {
+    background-color: #FF7043;
+}
+
+.table-container {
+    padding: 20px;
+    margin-top: 90px;
+    transition: margin-right 0.3s ease;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: #222;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    border: 1px solid #555;
+    padding: 12px;
+    text-align: left;
+    color: #ddd;
+}
+
+th {
+    background-color: #FF5722;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #333;
+}
+
+tr:hover {
+    background-color: #444;
+}
+
+.menu-open .menu {
+    transform: translateX(0);
+}
+
+.menu-open .table-container {
+    margin-right: 270px;
+}
+
+main {
+    padding: 20px;
+    margin-top: 80px;
+}
+
+.main-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh; 
+    margin-top: 70px;
+}
+
+.main-content2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 45vh; 
+    margin-top: 10px;
+}
+
+.contenedor {
+    background-color: #222;
+    color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 500px;
+    box-sizing: border-box;
+    text-align: center;
+    position: relative; 
+    top: 60px; 
+}
+
+.campo {
+    margin-bottom: 20px;
+}
+
+.campo label {
+    display: block;
+    margin-bottom: 8px;
+    color: #ddd;
+}
+
+.campo input,
+.campo textarea,
+.campo select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #555;
+    border-radius: 6px;
+    background-color: #333;
+    color: white;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #FF5722;
+    color: white;
+    border: none;
+    padding: 12px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 6px;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #FF7043;
+}
+
+.gestiones-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.gestion-card {
+    background-color: #222;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    width: 400px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.gestion-card h2 {
+    margin-top: 0;
+}
+
+.gestion-card p {
+    font-size: 14px;
+}
+
+.view-btn {
+    display: block;
+    background-color: #FF5722;
+    color: white;
+    padding: 10px;
+    border-radius: 4px;
+    text-align: center;
+    text-decoration: none;
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.view-btn:hover {
+    background-color: #FF7043;
+}
+
+.delete-btn {
+    background-color: transparent;
+    border: none;
+    color: #FF5722;
+    font-size: 20px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    align-self: flex-end;
+}
+
+.delete-btn:hover {
+    color: #FF7043;
+}
+
+.form-container-gestion {
+    background-color: #222;
+    color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+}
+
+.frase-info {
+    display: block; 
+    margin-bottom: 20px; 
+    color: #FF5722; 
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column; /* Stack title and buttons vertically */
+        align-items: center;
+        text-align: center; /* Center align text */
+    }
+
+    .nav-buttons {
+        gap: 5px; /* Reduce el espacio entre botones */
+        padding: 0 10px; /* Ajusta el padding para mejor alineación */
+    }
+
+    .menu-toggle, .nav-btn {
+        padding: 8px 15px; /* Reduce el tamaño del padding */
+        font-size: 14px; /* Reduce el tamaño de la fuente */
+        border-radius: 3px; /* Ajusta el borde */
+    }
+
+    .menu {
+        width: 200px; /* Reduce el ancho del menú */
+    }
+
+    .search-btn, .menu-action {
+        font-size: 15px; /* Reduce el tamaño de la fuente para pantallas medianas */
+        padding: 10px; /* Reduce el padding de los botones */
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 20px; /* Further adjust font size */
+    }
+
+    .hero h2, section h2 {
+        font-size: 20px; /* Further adjust font size */
+    }
+
+    .hero p, section p {
+        font-size: 14px; /* Further adjust font size */
+    }
+
+    .nav-buttons {
+        gap: 5px; /* Mantiene el pequeño espacio entre botones */
+        padding: 0 5px; /* Ajusta el padding para mejor alineación */
+    }
+
+    .menu-toggle, .nav-btn {
+        padding: 7px 10px; /* Reduce aún más el tamaño del padding */
+        font-size: 15px; /* Ajusta el tamaño de la fuente */
+        border-radius: 2px; /* Ajusta el borde */
+    }
+
+    .menu {
+        width: 180px; /* Reduce aún más el ancho del menú */
+    }
+
+    .search-btn, .menu-action {
+        font-size: 14px; /* Reduce el tamaño de la fuente para pantallas muy pequeñas */
+        padding: 9px; /* Reduce el padding de los botones */
+    }
+}
+
+/* Ajustes para la tabla en pantallas pequeñas */
+@media (max-width: 768px) {
+    table {
+        font-size: 14px; /* Reduce el tamaño de la fuente de la tabla */
+    }
+
+    th, td {
+        padding: 8px; /* Reduce el padding de las celdas */
+    }
+}
+
+@media (max-width: 480px) {
+    table {
+        font-size: 12px; /* Ajusta aún más el tamaño de la fuente */
+    }
+
+    th, td {
+        padding: 6px; /* Ajusta el padding para pantallas muy pequeñas */
+    }
+}

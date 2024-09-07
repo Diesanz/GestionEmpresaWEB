@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Añadir Usuario</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Gestión de Usuarios</h1>
+            <nav class="nav-buttons">
+                <a id = "visualizar" class="nav-btn">Visualizar</a>
+                <a href="/gestiones" class="nav-btn">Gestiones</a>
+            </nav>
+        </div>
+    </header>
+    <div class="main-content">
+        <div class="contenedor">
+            <h1>Añadir Usuario</h1>
+            <form id="add-user-form">
+                <div class="campo">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+                <div class="campo">
+                    <label for="apellidos">Apellidos:</label>
+                    <input type="text" id="apellidos" name="apellidos" required>
+                </div>
+                <div class="campo">
+                    <label for="dni">DNI:</label>
+                    <input type="text" id="dni" name="dni" required>
+                </div>
+                <div class="campo">
+                    <label for="email">Correo Electrónico:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="campo">
+                    <label for="nombre_usuario">Nombre Usuario</label>
+                    <input type="text" id="nombre_usuario" name="nombre_usuario" required>
+                </div>
+                <div class="campo">
+                    <label for="user_company">Empresa:</label>
+                    <select id="user_company" name="user_company" required>
+                        <option value="" disabled selected>Selecciona una empresa</option>
+                        
+                    </select>
+                </div>
+                <button type="submit">Añadir Usuario</button>
+            </form>
+        </div>
+    </div>
+    <script src="/static/js/scripts.js"></script>
+</body>
+</html>
