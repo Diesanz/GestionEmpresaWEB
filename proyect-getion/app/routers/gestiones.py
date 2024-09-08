@@ -1,9 +1,9 @@
 from fastapi import APIRouter, HTTPException, status, Depends
-from models.gestion import Gestion, Gestion_Empresas
-from models.gestor import Gestor
-from schemas.gestion import gestion_schema, gestion_empresas_schema
-from db.conexion import get_connection, close_connection
-from routers.gestores import current_me
+from ..models.gestion import Gestion, Gestion_Empresas
+from ..models.gestor import Gestor
+from ..schemas.gestion import gestion_schema, gestion_empresas_schema
+from ..db.conexion import get_connection, close_connection
+from ..routers.gestores import current_me
 from mysql.connector import Error
 from typing import List
 

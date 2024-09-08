@@ -1,9 +1,9 @@
 from fastapi import APIRouter, HTTPException, status, Depends
-from models.usuario import Usuario, UsuarioDB
-from models.gestor import Gestor
-from schemas.usuario import usuario_schema, usuario_schema_db
-from db.conexion import get_connection, close_connection
-from routers.gestores import current_me
+from ..models.usuario import Usuario, UsuarioDB
+from ..models.gestor import Gestor
+from ..schemas.usuario import usuario_schema, usuario_schema_db
+from ..db.conexion import get_connection, close_connection
+from ..routers.gestores import current_me
 from mysql.connector import Error
 
 # Define un router con el prefijo "/detalles" y un tag para la API
