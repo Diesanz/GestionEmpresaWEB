@@ -1,5 +1,5 @@
 from fastapi import FastAPI, Query
-from .routers import gestores, gestiones, visualizar, users
+from routers import gestores, gestiones, visualizar, users
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles

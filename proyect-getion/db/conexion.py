@@ -3,15 +3,11 @@ from dotenv import load_dotenv
 import mysql.connector
 from mysql.connector import Error
 from fastapi import HTTPException, status
-from common import access_sercret
+from common.secret import access_secret
 
 # Cargar variables de entorno desde el archivo .env
 load_dotenv()
 
-import mysql.connector
-from mysql.connector import Error
-from fastapi import HTTPException, status
-from common import access_secret
 
 def get_connection():
     try:

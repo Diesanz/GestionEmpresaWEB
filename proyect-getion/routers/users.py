@@ -1,8 +1,8 @@
 from fastapi import APIRouter, HTTPException, status, Request
-from ..models.usuario import Usuario, UsuarioDB
-from ..schemas.usuario import  usuario_schema_db
-from ..db.conexion import get_connection, close_connection
-from ..routers.gestores import current_me
+from models.usuario import Usuario, UsuarioDB
+from schemas.usuario import  usuario_schema_db
+from db.conexion import get_connection, close_connection
+from routers.gestores import current_me
 
 from mysql.connector import Error
 

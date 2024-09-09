@@ -1,19 +1,32 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: my-deployment
+  name: mi-aplicacion
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: my-app
+      app: mi-aplicacion
   template:
     metadata:
       labels:
-        app: my-app
+        app: mi-aplicacion
     spec:
       containers:
-      - name: my-container
+      - name: mi-aplicacion
         image: gcr.io/gestion-emp/my-image:tag
         ports:
         - containerPort: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: mi-aplicacion-service
+spec:
+  selector:
+    app: mi-aplicacion
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 80
+  type: LoadBalancer

@@ -1,10 +1,10 @@
 import os
 from dotenv import load_dotenv
 from fastapi import APIRouter, HTTPException, status, Depends, Request
-from ..models.gestor import Gestor, GestorDB
-from ..schemas.gestor import gestor_schema, gestor_schema_db
-from ..db.conexion import get_connection, close_connection
-from ..common import access_secret
+from models.gestor import Gestor, GestorDB
+from schemas.gestor import gestor_schema, gestor_schema_db
+from db.conexion import get_connection, close_connection
+from common.secret import access_secret
 from passlib.context import CryptContext
 from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
 import jwt
@@ -16,9 +16,9 @@ from mysql.connector import Error
 load_dotenv()
 
 # Lee las variables de entorno necesarias para la configuración de JWT
-ALGORITHM = access_secret("ALGORITHM")
-SECRET = access_secret("SECRET")
-ACCESS_TOKEN_DURATION = int(access_secret("ACCESS_TOKEN_DURATION"))
+ALGORITHM = access_secret('my-secret', 'ALGORITHM')
+SECRET = access_secret('my-secret', 'SECRET')
+ACCESS_TOKEN_DURATION = int(access_secret('my-secret', 'ACCESS_TOKEN_DURATION'))
 
 # Configura el contexto de cifrado para las contraseñas
 crypt = CryptContext(schemes=["bcrypt"])
